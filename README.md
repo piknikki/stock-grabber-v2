@@ -3,7 +3,7 @@ Stock Grabber is an app that grabs a few bits and bobs of stock information for 
 
 Feel free to clone or fork this repo and make it your own (follow the instructions below)!
 
-[Live Link](https://stock-quoter-42.herokuapp.com/)
+[Live Link](https://nikkipetersen.dev)
 
 
 ## Project setup
