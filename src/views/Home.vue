@@ -40,6 +40,9 @@ export default {
       this.stock = {}
       this.error = ''
     },
+    clear () {
+      this.symbol = ''
+    },
     search () {
       const axios = require('axios')
 
@@ -59,6 +62,7 @@ export default {
           console.log(response.data.quote)
         })
         .catch(this.handleErrors)
+      this.clear()
     },
     handleErrors (err) {
       if (err.status === 404) {
@@ -74,7 +78,7 @@ export default {
 
 <style>
 hr {
-  border-top: 2px solid gray;
+  border-top: 4px solid gray;
 }
 
 input, button {
@@ -88,13 +92,23 @@ input, button {
 
 #container {
   width: 40%;
-  margin: 0 auto;
+  margin: 100px auto;
+}
+
+.button-area {
+  text-align: center;
 }
 
 .buttons {
-  width: 40%;
-  margin: 10px;
+  width: 44%;
+  margin-top: 10px;
   padding: 10px;
   font-size: 1em;
+}
+
+input.quote-button {
+  background-image: linear-gradient(white, lightgrey);
+  border-radius: 2px;
+  border: 1px solid grey;
 }
 </style>
